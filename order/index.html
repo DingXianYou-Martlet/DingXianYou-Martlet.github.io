@@ -145,15 +145,22 @@ function clearAll() {
     update();
     document.querySelectorAll(".ctrl span").forEach(s => s.innerText = 0);
     const token = "5a6edb23ac3046cfbea440ae06817cac";
-    const message = `🛒 购物车已清空：${new Date().toLocaleString('zh-CN')}`;
+    const message = `🛒 购物车已清空: ${new Date().toLocaleString('zh-CN')}`;
     const url = `https://www.pushplus.plus/send?token=${token}&title=购物车清空通知&content=${encodeURIComponent(message)}&channel=mail`;
-
     fetch(url)
         .then(res => res.json())
         .then(result => {
-            alert(result.code === 200 ? "✅ 通知已发送到QQ邮箱!" : "✅ 购物车已清空，通知发送失败");
+            if (result.code === 200) {
+                alert("✅ 通知已发送到QQ邮箱！");
+            } else {
+                alert("❌ 发送失败：" + result.msg + "（错误码：" + result.code + "）");
+            }
+        })
+        .catch(err => {
+            alert("❌ 网络错误：" + err);
         });
 }
+
 
 
 </script>
