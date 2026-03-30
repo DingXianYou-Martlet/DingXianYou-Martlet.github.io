@@ -144,7 +144,7 @@ function clearAll() {
     for (let k in data) data[k] = 0;
     update();
     document.querySelectorAll(".ctrl span").forEach(s => s.innerText = 0);
-    const token = "5a6e******7cac";
+    const token = "5a6edb23ac3046cfbea440ae06817cac";
     const message = `🛒 购物车已清空：${new Date().toLocaleString('zh-CN')}`;
     const url = `https://www.pushplus.plus/send?token=${token}&title=购物车清空通知&content=${encodeURIComponent(message)}&channel=mail`;
 
