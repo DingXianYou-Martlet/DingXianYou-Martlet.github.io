@@ -151,7 +151,7 @@ function clearAll() {
         total += subtotal;
         orderMsg += `${names[k]} × ${c} 份 = ${subtotal} 元\n`;
     }
-    orderMsg += `\n💰 合计：${total} 元\n⏰ 下单时间：${new Date().toLocaleString('zh-CN')}`;
+    orderMsg += `\\n💰 合计：${total} 元\\n⏰ 下单时间：${new Date().toLocaleString('zh-CN')}`;
 
     // 2. 先推送订单详情到 QQ 邮箱
     const token = "5a6edb23ac3046cfbea440ae06817cac";
