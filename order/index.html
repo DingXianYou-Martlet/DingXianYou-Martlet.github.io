@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8" />
-<title>简易饭店点菜系统</title>
+<title>汉堡小屋</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
   body{background:#f7f8fa;padding:20px}
@@ -24,14 +24,14 @@
 </head>
 
 <body>
-  <h2 class="title">🍽️ 在线点菜</h2>
+  <h2 class="title">🍔汉堡大点兵</h2>
 
   <div class="food-box">
     <div class="food">
-      <img src="https://picsum.photos/seed/rou/400/260" alt="红烧肉">
+      <img src="https://pics.akarin.online/2026/03/492d06d24b1d0f687af304f4ac7d3b7d.jpg" alt="蜜雪冰城">
       <div class="info">
-        <div class="name">红烧肉</div>
-        <div class="price">38 元</div>
+        <div class="name">蜜雪冰城</div>
+        <div class="price">0元</div>
         <div class="ctrl">
           <button onclick="set('rou',38,-1)">-</button>
           <span id="rou">0</span>
@@ -41,10 +41,10 @@
     </div>
 
     <div class="food">
-      <img src="https://picsum.photos/seed/yu/400/260" alt="鱼香肉丝">
+      <img src="https://pics.akarin.online/2026/03/669e0a65dcb86768823adbba26b88b45.jpg" alt="茶百道">
       <div class="info">
-        <div class="name">鱼香肉丝</div>
-        <div class="price">26 元</div>
+        <div class="name">茶百道</div>
+        <div class="price">0元</div>
         <div class="ctrl">
           <button onclick="set('yu',26,-1)">-</button>
           <span id="yu">0</span>
@@ -54,10 +54,10 @@
     </div>
 
     <div class="food">
-      <img src="https://picsum.photos/seed/dan/400/260" alt="番茄炒蛋">
+      <img src="https://pics.akarin.online/2026/03/6e803565b403e149a3210f722b560e8c.jpg" alt="瑞幸">
       <div class="info">
-        <div class="name">番茄炒蛋</div>
-        <div class="price">16 元</div>
+        <div class="name">瑞幸</div>
+        <div class="price">0元</div>
         <div class="ctrl">
           <button onclick="set('dan',16,-1)">-</button>
           <span id="dan">0</span>
@@ -67,10 +67,10 @@
     </div>
 
     <div class="food">
-      <img src="https://picsum.photos/seed/ji/400/260" alt="可乐鸡翅">
+      <img src="https://pics.akarin.online/2026/03/c1a285bb55edbffbfc47bf6feb565d8c.jpg" alt="霸王茶姬">
       <div class="info">
-        <div class="name">可乐鸡翅</div>
-        <div class="price">32 元</div>
+        <div class="name">霸王茶姬</div>
+        <div class="price">0元</div>
         <div class="ctrl">
           <button onclick="set('ji',32,-1)">-</button>
           <span id="ji">0</span>
@@ -89,7 +89,7 @@
 
 <script>
   let data = { rou:0, yu:0, dan:0, ji:0 };
-  let names = { rou:"红烧肉", yu:"鱼香肉丝", dan:"番茄炒蛋", ji:"可乐鸡翅" };
+  let names = { rou:"蜜雪冰城", yu:"茶百道", dan:"瑞幸", ji:"霸王茶姬" };
   let prices = { rou:38, yu:26, dan:16, ji:32 };
 
   function set(key, p, num) {
