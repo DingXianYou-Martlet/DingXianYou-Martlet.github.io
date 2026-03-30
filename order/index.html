@@ -141,25 +141,53 @@
   }
 
 function clearAll() {
-    for (let k in data) data[k] = 0;
-    update();
-    document.querySelectorAll(".ctrl span").forEach(s => s.innerText = 0);
+    // 1. 先生成订单详情（看看买了什么）
+    let orderMsg = "📝 新订单通知\n";
+    let total = 0;
+    for (let k in data) {
+        let c = data[k];
+        if (c <= 0) continue;
+        let subtotal = c * prices[k];
+        total += subtotal;
+        orderMsg += `${names[k]} × ${c} 份 = ${subtotal} 元\n`;
+    }
+    orderMsg += `\n💰 合计：${total} 元\n⏰ 下单时间：${new Date().toLocaleString('zh-CN')}`;
+
+    // 2. 先推送订单详情到 QQ 邮箱
     const token = "5a6edb23ac3046cfbea440ae06817cac";
-    const message = `🛒 购物车已清空: ${new Date().toLocaleString('zh-CN')}`;
-    const url = `https://www.pushplus.plus/send?token=${token}&title=购物车清空通知&content=${encodeURIComponent(message)}&channel=mail`;
-    fetch(url)
+    const orderUrl = `https://www.pushplus.plus/send?token=${token}&title=新订单通知&content=${encodeURIComponent(orderMsg)}&channel=mail`;
+    
+    fetch(orderUrl)
         .then(res => res.json())
-        .then(result => {
-            if (result.code === 200) {
-                alert("✅ 通知已发送到QQ邮箱！");
-            } else {
-                alert("❌ 发送失败：" + result.msg + "（错误码：" + result.code + "）");
+        .then(orderResult => {
+            if (orderResult.code !== 200) {
+                alert("❌ 订单通知发送失败：" + orderResult.msg);
+                return;
             }
+            for (let k in data) data[k] = 0;
+            update();
+            document.querySelectorAll(".ctrl span").forEach(s => s.innerText = 0);
+            const clearMsg = `🛒 购物车已清空: ${new Date().toLocaleString('zh-CN')}`;
+            const clearUrl = `https://www.pushplus.plus/send?token=${token}&title=购物车清空通知&content=${encodeURIComponent(clearMsg)}&channel=mail`;
+            
+            fetch(clearUrl)
+                .then(res => res.json())
+                .then(clearResult => {
+                    if (clearResult.code === 200) {
+                        alert("✅ 订单已提交，购物车已清空，通知均已发送到QQ邮箱！");
+                    } else {
+                        alert("✅ 订单已提交，但清空购物车通知发送失败：" + clearResult.msg);
+                    }
+                })
+                .catch(err => {
+                    alert("❌ 清空通知网络错误：" + err);
+                });
         })
         .catch(err => {
-            alert("❌ 网络错误：" + err);
+            alert("❌ 订单通知网络错误：" + err);
         });
 }
+
 
 
 
