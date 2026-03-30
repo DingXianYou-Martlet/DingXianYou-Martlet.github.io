@@ -8,7 +8,7 @@
 
 <div style="text-align: left; margin: 40px 0;">
   <a href="order/" 
-     style="display: inline-block; padding: 15px 30px; background: #64B5F6; color: white; font-size: 18px; border-radius: 10px; text-decoration: none; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+     style="display: inline-block; padding: 15px 30px; background: #1976D2; color: white; font-size: 18px; border-radius: 10px; text-decoration: none; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
      🍽️ 进入饭店点菜系统
   </a>
 </div>
