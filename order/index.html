@@ -26,6 +26,26 @@
 <body>
   <h2 class="title">🍔汉堡大点兵</h2>
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura-js@1.1.1/dist/sakura.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sakura-js@1.1.1/dist/sakura.min.js"></script>
+
+<script>
+  // 当网页加载完成后启动樱花
+  document.addEventListener('DOMContentLoaded', function() {
+    var sakura = new Sakura('body', {
+      colors: [
+        {
+          gradientColorStart: 'rgba(255, 183, 197, 0.9)',
+          gradientColorEnd: 'rgba(255, 197, 208, 0.9)',
+          gradientColorDegree: 120,
+        }
+      ],
+      delay: 200, // 樱花生成的延迟时间
+    });
+  });
+</script>
+
+
   <div class="food-box">
     <div class="food">
       <img src="https://pics.akarin.online/2026/03/492d06d24b1d0f687af304f4ac7d3b7d.jpg" alt="蜜雪冰城">
