@@ -33,9 +33,9 @@
         <div class="name">蜜雪冰城</div>
         <div class="price">0元</div>
         <div class="ctrl">
-          <button onclick="set('rou',38,-1)">-</button>
+          <button onclick="set('rou',0,-1)">-</button>
           <span id="rou">0</span>
-          <button onclick="set('rou',38,1)">+</button>
+          <button onclick="set('rou',0,1)">+</button>
         </div>
       </div>
     </div>
@@ -46,9 +46,9 @@
         <div class="name">茶百道</div>
         <div class="price">0元</div>
         <div class="ctrl">
-          <button onclick="set('yu',26,-1)">-</button>
+          <button onclick="set('yu',0,-1)">-</button>
           <span id="yu">0</span>
-          <button onclick="set('yu',26,1)">+</button>
+          <button onclick="set('yu',0,1)">+</button>
         </div>
       </div>
     </div>
@@ -59,9 +59,9 @@
         <div class="name">瑞幸</div>
         <div class="price">0元</div>
         <div class="ctrl">
-          <button onclick="set('dan',16,-1)">-</button>
+          <button onclick="set('dan',0,-1)">-</button>
           <span id="dan">0</span>
-          <button onclick="set('dan',16,1)">+</button>
+          <button onclick="set('dan',0,1)">+</button>
         </div>
       </div>
     </div>
@@ -72,9 +72,9 @@
         <div class="name">霸王茶姬</div>
         <div class="price">0元</div>
         <div class="ctrl">
-          <button onclick="set('ji',32,-1)">-</button>
+          <button onclick="set('ji',0,-1)">-</button>
           <span id="ji">0</span>
-          <button onclick="set('ji',32,1)">+</button>
+          <button onclick="set('ji',0,1)">+</button>
         </div>
       </div>
     </div>
@@ -90,7 +90,7 @@
 <script>
   let data = { rou:0, yu:0, dan:0, ji:0 };
   let names = { rou:"蜜雪冰城", yu:"茶百道", dan:"瑞幸", ji:"霸王茶姬" };
-  let prices = { rou:38, yu:26, dan:16, ji:32 };
+  let prices = { rou:0, yu:0, dan:0, ji:0 };
 
   function set(key, p, num) {
     data[key] += num;
