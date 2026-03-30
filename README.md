@@ -3,4 +3,10 @@
 -QQ:2046985534  
 -We-Chat:xxy118123  
 -[梦的开始](3.25.001.md)
--[进入点菜系统](./order/index.html)
+
+<div style="text-align: center; margin: 40px 0;">
+  <a href="order/" 
+     style="display: inline-block; padding: 15px 30px; background: #ff4444; color: white; font-size: 18px; border-radius: 10px; text-decoration: none; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+     🍽️ 进入饭店点菜系统
+  </a>
+</div>
