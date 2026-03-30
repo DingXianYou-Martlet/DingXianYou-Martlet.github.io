@@ -32,6 +32,8 @@
 <script>
   // 当网页加载完成后启动樱花
   document.addEventListener('DOMContentLoaded', function() {
+    document.body.style.minHeight='100vh';
+    document.body.style.margin='0';
     var sakura = new Sakura('body', {
       colors: [
         {
