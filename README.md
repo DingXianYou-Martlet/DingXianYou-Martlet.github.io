@@ -12,3 +12,5 @@
      订单系统
   </a>
 </div>
+
+<a href = "https://github.com/DingXianYou-Martlet/deepseek-into-QQ"> NapCat-Deepseek Adapter </a>
