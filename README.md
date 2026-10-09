@@ -16,4 +16,4 @@
 <a href = "https://github.com/DingXianYou-Martlet/deepseek-into-QQ"> NapCat-Deepseek Adapter </a>
 
 <a href="2048.html">
-     nailong</a>
+     合成奶龙</a>
