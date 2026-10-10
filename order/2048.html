@@ -8,6 +8,11 @@
   /* 全局样式：去掉页面默认边距，设置背景 */
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
+  /* 阻止移动端下拉刷新（pull-to-refresh）与过度滚动回弹 */
+  html, body {
+    overscroll-behavior: none;
+  }
+
   body {
     background: #faf8ef;
     font-family: "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
@@ -595,6 +600,12 @@
       move(dir);
     }
   });
+
+  // ---- 阻止移动端下拉刷新：拦截纵向滑动的默认行为 ----
+  document.addEventListener("touchmove", function (e) {
+    if (e.touches.length > 1) return; // 保留多指手势
+    e.preventDefault();
+  }, { passive: false });
 
   // ---- 触屏滑动（手机也能玩）----
   let touchStartX = 0, touchStartY = 0;
