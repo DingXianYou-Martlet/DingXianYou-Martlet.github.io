@@ -22,7 +22,7 @@
     min-height: 100vh;
     -webkit-user-select: none;
     user-select: none;
-    touch-action: manipulation;
+    touch-action: none;
   }
 
   .container {
@@ -601,8 +601,10 @@
     }
   });
 
-  // ---- 阻止移动端下拉刷新：拦截纵向滑动的默认行为 ----
-  document.addEventListener("touchmove", function (e) {
+  // ---- 阻止移动端下拉刷新（微信/QQ 内置浏览器）----
+  // 必须绑定在 document.body 上（部分微信版本对 document 冒泡异常），
+  // 且必须显式 passive: false（iOS 11.3+ 的 WKWebView 默认 passive，会忽略 preventDefault）。
+  document.body.addEventListener("touchmove", function (e) {
     if (e.touches.length > 1) return; // 保留多指手势
     e.preventDefault();
   }, { passive: false });
