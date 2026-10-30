@@ -7,18 +7,10 @@
 -[有意思的网站](https://github.com/DingXianYou-Martlet/amazing-webs/blob/main/README.md)
 
 
-<div style="text-align: left; margin: 40px 0 14px;">
+<div style="text-align: left; margin: 40px 0;">
   <a href="order/index.html" 
      style="display: inline-block; padding: 15px 30px; background: #1976D2; color: white; font-size: 18px; border-radius: 10px; text-decoration: none; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
      订单系统
-  </a>
-</div>
-
-<div style="text-align: left; margin: 0 0 28px;">
-  <a href="https://github.com/DingXianYou-Martlet/nice-webs" 
-     target="_blank" rel="noopener"
-     style="display: inline-block; padding: 15px 30px; background: linear-gradient(135deg, #7C5CFF, #22A7C4); color: white; font-size: 18px; border-radius: 10px; text-decoration: none; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-     🎪 好玩网址收集站
   </a>
 </div>
 
