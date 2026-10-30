@@ -13,7 +13,7 @@
   </a>
 </div>
 
-<a href = "https://github.com/DingXianYou-Martlet/deepseek-into-QQ"> NapCat-Deepseek Adapter </a>
+<a href = "https://github.com/DingXianYou-Martlet/amazing-webs"> 有意思的网站 </a>
 
 <a href="order/2048.html">
      合成奶龙</a>
@@ -22,3 +22,4 @@
 <a href="order/angry-nailong.html">
      愤怒的奶龙</a>
 
+<a href = "https://github.com/DingXianYou-Martlet/deepseek-into-QQ"> NapCat-Deepseek Adapter </a>
