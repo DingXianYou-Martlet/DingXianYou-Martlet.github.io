@@ -13,7 +13,7 @@
   </a>
 </div>
 
-<a href = "https://github.com/DingXianYou-Martlet/amazing-webs/blob/main/%E7%A5%9E%E5%A5%87%E7%BD%91%E7%AB%99"> 有意思的网站 </a>
+<a href = "https://github.com/DingXianYou-Martlet/amazing-webs/blob/main/README.md"> 有意思的网站 </a>
 
 <a href="order/2048.html">
      合成奶龙</a>
